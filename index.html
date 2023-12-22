@@ -288,23 +288,22 @@
         bounds_group.addLayer(layer_JaringanJalan_3);
         map.addLayer(layer_JaringanJalan_3);
         function pop_SMASederajat_4(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['SMA'] !== null ? autolinker.link(feature.properties['SMA'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                   
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Desc_Alamat'] !== null ? autolinker.link(feature.properties['Desc_Alamat'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Desc_Status'] !== null ? autolinker.link(feature.properties['Desc_Status'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                 <tr>\
-                        <td colspan="2">' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '" '+ 'class=popupImage' +'>' : '') +'</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
+        var popupContent = '<table>' +
+        '<tr>' +
+        '<td colspan="2">' + (feature.properties['SMA'] !== null ? autolinker.link(feature.properties['SMA'].toLocaleString()) : '') + '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td colspan="2">' + (feature.properties['Desc_Alamat'] !== null ? autolinker.link(feature.properties['Desc_Alamat'].toLocaleString()) : '') + '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td colspan="2">' + (feature.properties['Desc_Status'] !== null ? autolinker.link(feature.properties['Desc_Status'].toLocaleString()) : '') + '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td colspan="2">' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '" class="popupImage">' : '') + '</td>' +
+        '</tr>' +
+        '</table>';
+        layer.bindPopup(popupContent, { maxHeight: 400 });
+
 
         function style_SMASederajat_4_0() {
             return {
